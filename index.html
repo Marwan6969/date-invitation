@@ -248,49 +248,56 @@
     pointer-events:none; z-index:40;
   }
 
-  /* ---- consequence page ---- */
-  #page-consequence{
-    background:radial-gradient(ellipse at center, var(--blood) 0%, var(--blood-dark) 70%, #060102 100%);
-  }
+/* ---- consequence page ---- */
+#page-consequence{
+  background:radial-gradient(ellipse at center, var(--blood) 0%, var(--blood-dark) 70%, #060102 100%);
+}
 
 #page-consequence .card{
-    width:min(90vw,750px);
-    padding:60px;
+  width:min(92vw,750px);
+  padding:clamp(24px,6vw,60px);
+  border-radius:32px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:220px;
 }
-  .typewriter-wrap{
-    width:min(90vw,700px);
-    max-width:700px;
-    min-height:140px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    overflow-wrap:normal;
-    word-break:keep-all;
+
+.typewriter-wrap{
+  width:100%;
+  max-width:700px;
+  min-height:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow-wrap:anywhere;
+  word-break:normal;
 }
-  }
+
+/* DELETE the extra } before this */
 .tw-line{
-    font-family:'Poppins',sans-serif;
-    font-weight:900;
-    font-size:clamp(2rem,5vw,3.2rem);
-    color:#fff;
-    text-align:center;
-    line-height:1.4;
-    letter-spacing:.03em;
+  font-family:'Poppins',sans-serif;
+  font-weight:900;
+  font-size:clamp(1.6rem,6vw,3.2rem);
+  color:#fff;
+  text-align:center;
+  line-height:1.35;
+  letter-spacing:.02em;
 
-    -webkit-text-stroke:2px #5a0000;
+  -webkit-text-stroke:1.5px #5a0000;
 
-    text-shadow:
-        0 0 8px #ff0000,
-        0 0 18px #ff0000,
-        0 0 35px rgba(255,0,0,.8);
+  text-shadow:
+    0 0 8px #ff0000,
+    0 0 18px #ff0000,
+    0 0 35px rgba(255,0,0,.8);
 }
-  .tw-char{ opacity:0; animation:glitchIn .05s forwards; display:inline-block; }
-  @keyframes glitchIn{
-    0%{ opacity:0; transform:translateX(-3px) skewX(6deg); filter:blur(3px); }
-    100%{ opacity:1; transform:translateX(0) skewX(0); filter:blur(0); }
-  }
+
+.tw-char{
+  opacity:0;
+  animation:glitchIn .05s forwards;
+  display:inline;
+}
 
   @media (prefers-reduced-motion: reduce){
     * { animation-duration:0.001s !important; animation-iteration-count:1 !important; transition-duration:0.001s !important; }
