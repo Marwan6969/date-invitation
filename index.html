@@ -252,11 +252,13 @@
   #page-consequence{
     background:radial-gradient(ellipse at center, var(--blood) 0%, var(--blood-dark) 70%, #060102 100%);
   }
-  #page-consequence .card{
+ #page-consequence .card{
     background:rgba(20,4,6,.45);
     border:2px solid rgba(255,80,90,.35);
     box-shadow:0 0 60px rgba(180,10,20,.5);
-  }
+    width:min(92vw,760px);
+    padding:40px;
+}
   .typewriter-wrap{
     width:min(90vw,700px);
     max-width:700px;
@@ -273,12 +275,16 @@
   .tw-line{
     font-family:'Poppins',sans-serif;
     font-weight:800;
-    font-size:clamp(1.35rem,4.6vw,2.2rem);
+    font-size:clamp(1.2rem,4vw,2rem);
     color:#ffe3e3;
-    margin:10px 0;
-    text-shadow:0 0 22px rgba(255,30,40,.75), 0 0 4px rgba(0,0,0,.6);
-    letter-spacing:.01em;
-  }
+    margin:12px 0;
+    text-shadow:
+        0 0 22px rgba(255,30,40,.75),
+        0 0 4px rgba(0,0,0,.6);
+    letter-spacing:.02em;
+    line-height:1.4;
+    white-space:nowrap;
+}
   .tw-char{ opacity:0; animation:glitchIn .05s forwards; display:inline-block; }
   @keyframes glitchIn{
     0%{ opacity:0; transform:translateX(-3px) skewX(6deg); filter:blur(3px); }
