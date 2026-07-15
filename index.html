@@ -272,18 +272,28 @@
     word-break:keep-all;
 }
   }
-  .tw-line{
+.tw-line{
     font-family:'Poppins',sans-serif;
-    font-weight:800;
-    font-size:clamp(1.2rem,4vw,2rem);
-    color:#ffe3e3;
+    font-weight:900;
+    font-size:clamp(1.6rem,5vw,2.6rem);
+    color:#ffffff;
     margin:12px 0;
-    text-shadow:
-        0 0 22px rgba(255,30,40,.75),
-        0 0 4px rgba(0,0,0,.6);
-    letter-spacing:.02em;
-    line-height:1.4;
+    line-height:1.35;
+    letter-spacing:.03em;
     white-space:nowrap;
+
+    /* Red outline */
+    -webkit-text-stroke: 1.5px #8a0d17;
+
+    /* Red glow */
+    text-shadow:
+        0 0 6px #8a0d17,
+        0 0 12px #b11226,
+        2px 2px 0 #6a0812,
+        -2px -2px 0 #6a0812,
+        2px -2px 0 #6a0812,
+        -2px 2px 0 #6a0812,
+        0 0 28px rgba(255,40,40,.8);
 }
   .tw-char{ opacity:0; animation:glitchIn .05s forwards; display:inline-block; }
   @keyframes glitchIn{
